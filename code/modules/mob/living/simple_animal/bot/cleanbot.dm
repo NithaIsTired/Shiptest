@@ -251,8 +251,8 @@
 			mode = BOT_IDLE
 			return
 
-		if(loc == get_turf(target))
-			if(!(check_bot(target) && prob(50)))	//Target is not defined at the parent. 50% chance to still try and clean so we dont get stuck on the last blood drop.
+		if(get_dist(src, target) <= 1)	//checks for the distance instead if they are in the same tile
+			if(!(check_bot(target)))
 				UnarmedAttack(target)	//Rather than check at every step of the way, let's check before we do an action, so we can rescan before the other bot.
 				if(QDELETED(target)) //We done here.
 					target = null
@@ -275,8 +275,6 @@
 			target = null
 			mode = BOT_IDLE
 			return
-
-	oldloc = loc
 
 /mob/living/simple_animal/bot/cleanbot/proc/get_targets()
 	target_types = list(
