@@ -4,7 +4,7 @@
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,SCLERA,EMOTE_OVERLAY,SKINCOLORS)
 	default_features = list("mcolor" = "FFF", "tail_human" = "None", "ears" = "None", "wings" = "None", "body_size" = "Normal")
-	mutant_bodyparts = list("ears", "tail_human")
+	default_mutant_bodyparts = list("ears" = "None", "tail" = "None", "wings" = "None")
 	use_skintones = TRUE
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 	disliked_food = GROSS | RAW

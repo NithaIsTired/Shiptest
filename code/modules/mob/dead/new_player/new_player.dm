@@ -147,6 +147,7 @@
 		relevant_cap = max(hpc, epc)
 
 	if(href_list["show_preferences"])
+		client.prefs.needs_update = TRUE
 		client.prefs.ShowChoices(src)
 		return 1
 
@@ -280,8 +281,6 @@
 		return JOB_UNAVAILABLE_ACCOUNTAGE
 	if(check_playtime && !ship.source_template.has_job_playtime(client, job))
 		return JOB_UNAVAILABLE_PLAYTIME
-	if(latejoin && !job.special_check_latejoin(client))
-		return JOB_UNAVAILABLE_GENERIC
 	return JOB_AVAILABLE
 
 /mob/dead/new_player/proc/AttemptLateSpawn(datum/job/job, datum/overmap/ship/controlled/ship, check_playtime = TRUE)

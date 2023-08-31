@@ -182,3 +182,6 @@
 	var/body_pixel_x_offset = 0
 	///Default Y offset
 	var/body_pixel_y_offset = 0
+
+	///Temporary flavor text which most mobs can set by using the IC tab
+	var/temporary_flavor_text
